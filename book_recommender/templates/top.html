@@ -77,27 +77,24 @@
           <p>Here is the list of top 50 books for you to enjoy.</p>
         </div>
 
-        <div class="row">
-
         <div class="row portfolio-container">
+        {%for i in data%}
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{% static '/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-4 portfolio-item filter-app">
+            <img src="{{ i.img }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="{% static '/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
-            </div>
+              <h3>{{ i.name }}</h3>
+              <h4>Author:<br>{{ i.author }}</h4>
+              <p>Ratings:{{ i.rating }}</p>
+              </div>
           </div>
-
-
-          </div>
-
+          {% endfor %}
         </div>
+
 
       </div>
     </section><!-- End Portfolio Section -->
+  </main>
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
