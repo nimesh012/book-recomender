@@ -10,3 +10,7 @@ from random import sample
 
 def index(request):
     return render(request, 'index.html')
+
+
+def top(request):
+    return render(request, 'top.html')
