@@ -48,8 +48,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="/">HOME</a></li>
-          <li><a class="nav-link scrollto active" href="/top">TOP 50</a></li>
-          <li><a class="nav-link scrollto" href="/recommend">RECOMMEND</a></li>
+          <li><a class="nav-link scrollto " href="/top">TOP 50</a></li>
+          <li><a class="nav-link scrollto active" href="/recommend">RECOMMEND</a></li>
         </ul>
 
       </nav><!-- .navbar -->
@@ -61,9 +61,14 @@
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container position-relative">
       <h1>Welcome to Heven fellow reader!</h1>
-      <h2>A one stop destination for all your book Selection/Recomendation needs<br> so you can chill back while we select the perfect book for you to enjoy</h2>
-      <a href="/recommend" class="btn-get-started scrollto">Get Started</a>
-    </div>
+      <h2>Just enter the name of the book in the field given below<br> And chill back while we select the perfect book for you to enjoy</h2>
+<br><br>
+      <form action="/recommendation" method="get">
+        <input type="text" name="text" style="border-radius:25px;height:45px;width:500px "><br><br>
+        <button class="btn btn-outline-warning" style="border-radius:25px;height:45px;width:200px " type="submit">commence</button>
+      </form>
+      </div>
+
   </section><!-- End Hero -->
 
   <main id="main">
@@ -113,3 +118,7 @@
 </body>
 
 </html>
+
+
+
+
