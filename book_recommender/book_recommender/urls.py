@@ -23,5 +23,7 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
-path('top/', views.top, name="top")
+    path('top/', views.top, name="top"),
+    path('recommend/', views.recommend, name="recommend"),
+    path('recommendation/', views.recommendation, name="recommendation"),
 ]

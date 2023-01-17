@@ -28,3 +28,12 @@ def top(request):
     top_data = popular(popular_df)
     params = {'data': top_data}
     return render(request, 'top.html', params)
+
+
+def recommend(request):
+    return render(request, 'recommend.html')
+
+
+def recommendation(request):
+
+    return render(request, 'recommendation.html')
