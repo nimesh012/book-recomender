@@ -60,7 +60,15 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container position-relative">
-      <h1>Below are the list of book you should try</h1>
+      {%if pointer%}
+      <h1 style="color:yellow">Below are the list of book you should try</h1>
+
+      {% else %}
+      <h1 style="color:yellow">Ohh NO!! Book not found</h1>
+      <h2>Please enter the precise name of the book</h2><h2>BELOW IS THE LIST OF TOP 50 BOOK YOU CAN ENJOY </h2>
+      {% endif %}
+
+
 
 
         <a href="/recommend" class="btn-get-started scrollto" type="submit">Another book!</a>
@@ -76,22 +84,43 @@
       <div class="container">
 
         <div class="section-title">
+          {%if pointer%}
+          <h2>Recommended Books</h2>
+          <p>Here are some books for you to like to read.</p>
+          {% else %}
           <h2>Top Books</h2>
           <p>Here is the list of top 50 books for you to enjoy.</p>
+          {% endif %}
         </div>
 
         <div class="row portfolio-container">
-        {%for i in data%}
+        {%if pointer%}
+
+          {%for i in books_list%}
 
           <div class="col-lg-4 col-md-4 portfolio-item filter-app">
-            <img src="{{ i.img }}" class="img-fluid" alt="">
+            <img src={{ i.Image }} class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h3>{{ i.name }}</h3>
+              <h3>{{ i.title }}</h3>
               <h4>Author:<br>{{ i.author }}</h4>
-              <p>Ratings:{{ i.rating }}</p>
+              <p>Year-Of-Publication:{{ i.Year}}</p>
               </div>
           </div>
           {% endfor %}
+          {% else %}
+          {%for i in books_list%}
+
+          <div class="col-lg-4 col-md-4 portfolio-item filter-app">
+            <img src={{ i.Image }} class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h3>{{ i.title }}</h3>
+              <h4>Author:<br>{{ i.author }}</h4>
+              <p>Year-Of-Publication:{{ i.Year}}</p>
+              </div>
+          </div>
+          {% endfor %}
+
+          {% endif %}
         </div>
 
 
